@@ -1,0 +1,33 @@
+import java.util.Scanner;	
+public class CF_Pangram {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int size=0,i;
+		char ch;
+		String s="";
+		StringBuilder ch_pool = new StringBuilder();
+		size=input.nextInt();
+		s=input.next();
+		if(size < 26)
+			System.out.println("NO");
+		else{
+		for(i=0;i<size;i++){
+			ch=s.charAt(i);
+			ch_pool=CheckString(ch_pool,ch);		
+		}
+		if(ch_pool.length() == 26)
+			System.out.println("YES");
+		else
+			System.out.println("NO");
+		}
+	}
+	public static StringBuilder CheckString(StringBuilder cp, char c){
+		int i;
+		for(i=0;i<cp.length();i++){
+			if(Character.toLowerCase(c)==cp.charAt(i))
+				return cp;				
+		}
+		cp.append(Character.toLowerCase(c));
+		return cp;
+	}
+}
