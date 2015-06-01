@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class CF_NewYearTrans {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		int n,t,i;
+		n=input.nextInt();
+		t=input.nextInt();
+		int[] a = new int[n-1];
+		for(i=0;i<n-1;i++)
+			a[i]=input.nextInt();
+		i=0;
+		while(i<t){
+			i=i+a[i];
+			if(i==t-1){
+				System.out.println("YES");
+				break;
+			}
+		}
+		if(i>=t)
+			System.out.println("NO");
+	}
+}
