@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class CF_Squats {
+	public static void main(String[] args){
+		Scanner input =new Scanner(System.in);
+		int standing=0,i,count=0;
+		int n=input.nextInt();
+		char[] hamster=new char[n];
+		String ham = input.next();
+		for(i=0;i<hamster.length;i++){
+			hamster[i]=ham.charAt(i);
+			if(hamster[i]=='X')
+				++standing;
+		}
+		i=0;
+		while(standing > n/2){
+			if(hamster[i]=='X'){
+				hamster[i]='x';
+				--standing;
+				++count;
+			}
+			++i;
+		}
+		i=0;
+		while(standing < n/2){
+			if(hamster[i]=='x'){
+				hamster[i]='X';
+				++standing;
+				++count;
+			}
+			++i;
+		}
+		System.out.println(count);
+		for(i=0;i<hamster.length;i++)
+			System.out.print(hamster[i]);
+	}
+}
