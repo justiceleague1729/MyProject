@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class CF_DominoTiling {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		int m,n;
+		m=input.nextInt();
+		n=input.nextInt();
+		System.out.println((m*n)/2);
+	}
+}
