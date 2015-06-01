@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class CF_SoldierAndBananas {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int k,n,w;
+		long sum=0;
+		k=input.nextInt();
+		n=input.nextInt();
+		w=input.nextInt();
+		sum=(w*(w+1)*k/2);
+		if(sum <= n)
+			System.out.println(0);
+		else
+			System.out.println(sum-n);
+	}
+}
