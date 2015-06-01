@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class CF_HQ9 {
+	public static void main(String[] args){
+		Scanner input= new Scanner(System.in);
+		String s;
+		int i;
+		s=input.next();
+		for(i=0;i<s.length();i++){
+			if(s.charAt(i)=='H'||s.charAt(i)=='Q'||s.charAt(i)=='9'){
+				System.out.println("YES");
+				break;
+			}
+		}
+		if(i==s.length())
+			System.out.println("NO");
+	}
+}
