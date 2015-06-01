@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class CF_StringTask {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		String s, new_s ="";
+		int i;
+		s=input.next();
+		for(i=0;i<s.length();i++){
+			if(s.charAt(i)=='A'||s.charAt(i)=='a'||s.charAt(i)=='E'||s.charAt(i)=='e'||s.charAt(i)=='I'||s.charAt(i)=='i'||s.charAt(i)=='O'||s.charAt(i)=='o'||s.charAt(i)=='U'||s.charAt(i)=='u'||s.charAt(i)=='Y'||s.charAt(i)=='y'){}
+			else {
+				if(Character.isLowerCase(s.charAt(i))){
+					new_s=new_s+ "." +s.charAt(i);
+				}
+				else {
+					new_s=new_s +"." +Character.toLowerCase(s.charAt(i));
+				}
+			}
+				
+		}
+		System.out.println(new_s);
+	}
+}
