@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class CF_Football {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		String s=input.next();
+		int i=0,j=0;
+		if(s.length() < 7)
+			System.out.println("NO");
+		else{
+		while(i<=s.length()-7){
+			for(j=i;j<=i+6;j++){
+				if(s.charAt(j)!=s.charAt(i))
+					break;
+			}
+			if(j==i+7){
+				System.out.println("YES");
+				break;
+			}
+			i++;
+		}
+		if(i==s.length()-6)
+			System.out.println("NO");
+	}
+	}
+}
