@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class CF_PythagoreanTheoremII {
+	public static void main(String[] args){
+		Scanner input= new Scanner(System.in);
+		int a,b,n,count=0,root=0;
+		n=input.nextInt();
+			for(a=1;a<n;a++){
+				for(b=a;b<n;b++){
+					root=(int) Math.sqrt((a*a+b*b));
+					if(root*root == a*a + b*b && root <=n)
+						++count;
+				}
+			}
+		System.out.println(count);
+	}
+}
