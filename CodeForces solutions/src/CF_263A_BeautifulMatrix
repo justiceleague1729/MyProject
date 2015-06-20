@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class CF_BeautifulMatrix {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int[][] matrix = new int[5][5];
+		int i,j;
+		int row=0,col=0;
+		for(i=0;i<5;i++){
+			for(j=0;j<5;j++){
+					matrix[i][j]=input.nextInt();
+					if(matrix[i][j]==1){
+						row=i;
+						col=j;
+			}
+		}
+	}
+		System.out.println(Math.abs(row-2) + Math.abs(col-2));
+}
+}

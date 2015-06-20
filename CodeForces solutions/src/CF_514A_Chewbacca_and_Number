@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class CF_ChewbaccaAndNumber {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		long x;
+		x=input.nextLong();
+		if(x==0)
+			System.out.println(0);
+		else{
+		long digit;
+		int i=0,j;
+		long[] a = new long[19];
+		while(x!=0){
+			digit= x%10;
+			//System.out.println("digitvalue: "+digit);
+			a[i++]=digit;
+			x/=10;
+		}
+		//System.out.println("ivalue: " +i);
+		/*for(j=0;j<i;j++){
+			System.out.print(a[j] +" ");
+		}*/
+		for(j=i-1;j>=0;j--){
+			if(9-a[j] < a[j])
+				a[j]=9-a[j];
+		}
+		j=i-1;
+		if(a[j]==0)
+			a[j]=9;
+		while(j>=0){
+			System.out.print(a[j]);
+			--j;
+	}
+		}
+}
+}

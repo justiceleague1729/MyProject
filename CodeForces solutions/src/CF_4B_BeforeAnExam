@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class CF_BeforeAnExam {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int d=0, i, sumTime=0, extra=0, minSum=0, maxSum=0;
+		d=input.nextInt();
+		sumTime=input.nextInt();
+		int[] minTime=new int[d];
+		int[] maxTime=new int[d];
+		for(i=0;i<d;i++){
+			minTime[i]=input.nextInt();
+			//System.out.println("mintime[i]=" +minTime[i]);
+			maxTime[i]=input.nextInt();
+			//System.out.println("maxtime[i]=" +maxTime[i]);
+			minSum+=minTime[i];
+			maxSum+=maxTime[i];
+		}
+		//System.out.println("minsum="+minSum);
+		//System.out.println("maxsum="+maxSum);	
+		if(minSum>sumTime || maxSum<sumTime)
+			System.out.println("NO");
+		else{
+			i=0;
+			extra=sumTime-minSum;
+			//System.out.println("Extra="+extra);
+			while(extra!=0){
+				if(minTime[i]!=maxTime[i]){
+					++minTime[i];
+					//System.out.println("++minTime["+i +"]"+(++minTime[i]));
+					extra--;
+					//System.out.println("new extra="+extra);
+ 			}
+				else
+					++i;
+			}
+			System.out.println("YES");
+			for(i=0;i<d;i++)
+				System.out.print(minTime[i] +" ");
+		}
+	}
+}

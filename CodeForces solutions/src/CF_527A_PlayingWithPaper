@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class CF_PlayingWithPaper {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		long a,b,temp;
+		long count=0,temp_count=0;
+		a=input.nextLong();
+		b=input.nextLong();
+		while(a!=b && b>0){
+			temp_count=a/b;
+			count+=temp_count;
+			a-=temp_count*b;
+			if(a<b){
+				temp=a;
+				a=b;
+				b=temp;
+			}
+		}
+		System.out.println(count);
+	}
+}

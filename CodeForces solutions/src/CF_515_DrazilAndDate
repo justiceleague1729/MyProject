@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class CF_DrazilAndDate {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		long a,b,s;
+		a=input.nextLong();
+		b=input.nextLong();
+		s=input.nextLong();
+		if(s<(Math.abs(a)+Math.abs(b)))
+			System.out.println("No");
+		else{
+			if((s-(Math.abs(a)+Math.abs(b)))%2==0 || s==(Math.abs(a)+Math.abs(b)))
+				System.out.println("Yes");
+			else
+				System.out.println("No");
+		}
+	}
+}

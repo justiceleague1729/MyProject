@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class CF_TheatreSquare {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		long n,m,a;
+		long len_num, wid_num;
+		n=input.nextLong();
+		m=input.nextLong();
+		a=input.nextLong();
+		if(n%a == 0)
+			len_num=n/a;
+		else
+			len_num=n/a+1;
+		if(m%a == 0)
+			wid_num=m/a;
+		else
+			wid_num=m/a+1;
+		System.out.println(len_num*wid_num);
+	}
+}

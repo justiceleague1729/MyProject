@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class CF_Team {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		int n,p,v,t,count=0,i;
+		n=input.nextInt();
+		for(i=1;i<=n;i++){
+			p=input.nextInt();
+			v=input.nextInt();
+			t=input.nextInt();
+			if(p+v+t >= 2)
+				++count;
+		}
+		System.out.println(count);
+	}
+}

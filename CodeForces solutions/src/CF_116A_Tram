@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class CF_Tram {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int n,a,b,sum=0,maxsum=0,i;
+		n=input.nextInt();
+		for(i=1;i<=n;i++){
+			a=input.nextInt();
+			b=input.nextInt();
+			sum+=(b-a);
+			if(sum>maxsum)
+				maxsum=sum;
+		}
+		System.out.println(maxsum);
+	}
+}

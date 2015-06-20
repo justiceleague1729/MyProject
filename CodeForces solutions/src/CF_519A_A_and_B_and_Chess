@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class CF_ChessGame {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		int i,j;
+		String s="";
+		int wcount=0, bcount=0;
+		char[][] board = new char[8][8];
+		for(i=0;i<8;i++){
+			s=input.next();
+			for(j=0;j<8;j++){
+				board[i][j]=s.charAt(j);
+				//System.out.println(board[i][j]);
+				switch (board[i][j]){
+				case 'Q':
+					wcount+=9;
+					break;
+				case 'R':
+					wcount+=5;
+					break;
+				case 'B' :
+					wcount+=3;
+					break;
+				case 'N' :
+					wcount+=3;
+					break;
+				case 'P' :
+					wcount+=1;
+					break;
+				case 'q' :
+					bcount+=9;
+					break;
+				case 'r' :
+					bcount+=5;
+					break;
+				case 'b' :
+					bcount+=3;
+					break;
+				case 'n' :
+					bcount+=3;
+					break;
+				case 'p' :
+					bcount+=1;
+					break;
+				case '.' :
+					break;
+				}
+			}
+		}
+		//System.out.println("wcount: " +wcount);
+		//System.out.println("bcount: " +bcount);
+		if(wcount>bcount)
+			System.out.println("White");
+		else if(bcount>wcount)
+			System.out.println("Black");
+		else
+			System.out.println("Draw");
+	}
+}

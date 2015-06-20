@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class CF_AmusingJoke {
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		String s1=input.next();
+		int size1=s1.length();
+		String s2=input.next();
+		int size2=s2.length();
+		String s3=input.next();
+		int size3=s3.length();
+	//	System.out.println("size1,size2,size3= "+size1 +" "+size2+" "+size3);
+		if(size3 != size1 + size2)
+			System.out.println("NO");
+		else {
+			//System.out.println("Inside else");
+		char[] s1char=s1.toCharArray();
+		char[] s2char=s2.toCharArray();
+		char[] s3char=s3.toCharArray();
+		Arrays.sort(s1char);
+		Arrays.sort(s2char);
+		Arrays.sort(s3char);
+		String s1sorted=new String(s1char);
+		String s2sorted=new String(s2char);
+		String s3sorted=new String(s3char);
+		//System.out.println("s1sorted= "+s1sorted);
+		//System.out.println("s2sorted= "+s2sorted);
+		//System.out.println("s3sorted= "+s3sorted);
+		int j=0,k=0;
+		for(int i=0;i<size3;++i){
+			if(j<size1 && s3sorted.charAt(i)==s1sorted.charAt(j)){
+				++j;
+				//System.out.println("Inside s1 loop");
+			}
+			else if(k<size2 && s3sorted.charAt(i)==s2sorted.charAt(k)){
+				++k;
+				//System.out.println("Inside s2 loop");
+			}
+			//System.out.println("After round, i,j,k="+i +" " +j +" "+k);
+		}
+		//System.out.println("j="+j);
+		//System.out.println("k="+k);
+		if(j==size1 && k==size2)
+			System.out.println("YES");
+		else
+			System.out.println("NO");
+		//System.out.println(s1sorted);
+		}
+	}
+}
