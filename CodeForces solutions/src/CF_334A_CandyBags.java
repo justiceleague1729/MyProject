@@ -5,7 +5,7 @@ public class CF_334A_CandyBags {
 		int n=input.nextInt();
 		int i=1, j=n*n;
 		while(j>i){
-			System.out.println(i +" " +j +" " +(i+j));
+			System.out.println(i +" " +j);
 			++i;
 			--j;
 		}
